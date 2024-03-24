@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cantainer{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    padding: 10px;
+}
+.to-do-list{
+    background-color: white;
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to-do-list h2{
+    color: #022765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.to-do-list h2 img{
+    width: 70px;
+    margin-left: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+button{
+    background-color: red;
+    padding: 16px 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url("imgs/radio\ \(1\).png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    bottom: 8px;
+    left: 0;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(imgs/correct.png);
+}
+ul li span{
+    position: absolute;    
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #edeef0; 
+
+  
+}
